@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_travel_ui_tutorial/widgets/destination_carousel.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -22,7 +23,6 @@ class _HomeScreenState extends State<HomeScreen> {
         setState(() {
           _selectedIndex = index;
         });
-        print(_selectedIndex);
       },
       child: Container(
         height: 60,
@@ -74,6 +74,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   )
                   .toList(),
             ),
+            SizedBox(height: 20.0),
+            DestinationCarousel(),
           ],
         ),
       ),
